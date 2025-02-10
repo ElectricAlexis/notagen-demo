@@ -227,22 +227,22 @@
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1 active">
-          <video poster="" id="video1" autoplay controls height="100%">
+        <div class="item item-video1">
+          <video poster="" id="video1" controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/keyboard/1635.mp4" type="video/mp4">
+            <source src="static/videos/1635.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" controls height="100%">
+          <video poster="" id="video2" controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/keyboard/648.mp4" type="video/mp4">
+            <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" controls height="100%">
+          <video poster="" id="video3" controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/keyboard/342.mp4" type="video/mp4">
+            <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
@@ -250,39 +250,6 @@
   </div>
 </section>
 <!-- End video carousel -->
-<script>
-  // 获取所有视频元素
-  const videos = document.querySelectorAll('#results-carousel video');
-  // 获取所有视频项
-  const videoItems = document.querySelectorAll('#results-carousel .item');
-  // 遍历每个视频元素
-  videos.forEach((video, index) => {
-    // 监听视频播放结束事件
-    video.addEventListener('ended', () => {
-      // 隐藏当前活动的视频项
-      const currentActiveItem = document.querySelector('#results-carousel .item.active');
-      currentActiveItem.classList.remove('active');
-      // 找到下一个视频项的索引
-      let nextIndex = index + 1;
-      if (nextIndex >= videoItems.length) {
-        // 如果是最后一个视频，回到第一个
-        nextIndex = 0;
-      }
-      // 显示下一个视频项
-      const nextItem = videoItems[nextIndex];
-      nextItem.classList.add('active');
-      // 获取下一个视频元素并开始播放
-      const nextVideo = nextItem.querySelector('video');
-      nextVideo.play();
-    });
-  });
-  // 禁用轮播插件的自动切换功能（如果有）
-  // 这里假设轮播插件有自动切换的选项可以通过配置禁用，具体根据实际插件情况修改
-  // 例如，如果是通过初始化时传入配置对象来控制，可能代码如下
-  // const carousel = bulmaCarousel.attach('#results-carousel', {
-  //   autoplay: false // 禁用自动播放
-  // });
-</script>
 
 
 
