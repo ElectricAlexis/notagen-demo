@@ -683,7 +683,7 @@
   // 通用加载函数
   function loadVideo(playerObj, index) {
       playerObj.currentIndex = (index + playerObj.videos.length) % playerObj.videos.length;
-      playerObj.player.src = `https://www.youtube.com/embed/${playerObj.videos[playerObj.currentIndex].id}?autoplay=1`;
+      playerObj.player.src = `https://www.youtube.com/embed/${playerObj.videos[playerObj.currentIndex].id}?autoplay=0`;
       playerObj.title.textContent = playerObj.videos[playerObj.currentIndex].title;
   }
 
@@ -746,7 +746,7 @@
   theme: '#b7daff', // 设置播放器主题颜色
   loop: 'all', // 设置循环播放模式，'all' 表示循环整个播放列表
   preload: 'auto', // 设置预加载模式，'auto' 表示自动预加载
-  volume: 0.7, // 设置初始音量，范围是 0 到 1
+  volume: 1, // 设置初始音量，范围是 0 到 1
   mutex: true, // 设置为 true 以确保同一时间只有一个播放器在播放
   listmaxheight: '513px', // 设置播放列表的最大高度
   storageName: 'aplayer', // 设置播放器的本地存储名称
