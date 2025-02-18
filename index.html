@@ -88,7 +88,7 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -96,10 +96,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -107,11 +107,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/ElectricAlexis/NotaGen" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -121,13 +121,13 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv</span> -->
                 </a>
               </span>
             </div>
@@ -141,10 +141,13 @@
 <!-- Teaser-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="static\images\model\notagen.png" alt="NotaGen" class="image" style="width: 600px;">
-      <h2 class="subtitle has-text-centered">
-        The training paradigms of NotaGen.
+    <div class="hero-body" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center;">
+      <h1 style="font-size: 24px; font-weight: bold; color: #2c3e50;">
+        🎵 Click on the music player at the bottom of the webpage and enjoy the music composed by NotaGen! 🎵
+      </h1>
+      <br>
+      <h2 style="font-size: 18px; font-weight: 500; color: #7f8c8d;">
+        (All videos and audio on this page are rendered and exported using Sibelius + NotePerformer.)
       </h2>
     </div>
   </div>
@@ -158,7 +161,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <div class="content has-text-justified" style="font-size: 20px;">
           <p>
             We introduce NotaGen, a symbolic music generation model aims to explore the potential of producing high-quality classical sheet music. Inspired by the success of Large Language Models (LLMs), NotaGen adopts pre-training, fine-tuning, and reinforcement learning paradigms (henceforth referred to as the LLM training paradigms). It is pre-trained on 1.6M pieces of music, and then fine-tuned on approximately 9K high-quality classical compositions conditioned on ``period-composer-instrumentation''  prompts. For reinforcement learning, we propose the CLaMP-DPO method, which further enhances generation quality and controllability without requiring human annotations or predefined rewards. Our experiments demonstrate the efficacy of CLaMP-DPO in symbolic music generation models with different architectures and encoding schemes. Furthermore, subjective A/B tests show that NotaGen outperforms baseline models against human compositions, greatly advancing musical aesthetics in symbolic music generation.
           </p>
@@ -172,67 +175,95 @@
 <!-- Data Representation and Model Architecture -->
  
 <section class="hero is-small">
-<br>
-<br>
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <div class="container"style="max-width: 1100px; margin: 50px;">
-        <h2 class="title is-3">Data Representation and Model Architecture</h2>
+      <div class="container"style="max-width: 1000px; margin: 50px;">
+        <h2 class="title is-3">Data Representation</h2>
         <br>
-        <div style="display: flex; justify-content: space-between">
+        <div style="display: flex; justify-content: center">
           <img src="static/images/model/data-representation.png" 
-               alt="data-representation.png" 
-               style="width: 48%; height: auto">
-  
-          <img src="static/images/model/model-architecture.png" 
-               alt="model-architecture" 
-               style="width: 48%; height: auto">
+               alt="data-representation.png"
+               style="width: 70%; height: auto">
          </div>
          <br>
-          <div class="content has-text-justified">
+          <div class="content has-text-justified" style="font-size: 20px;">
             <p>
               <a href="https://abcnotation.com/" target="_blank">ABC notation</a> is a musical notation system that uses a combination of letters, numbers, and symbols to represent musical notes. We adopt a modified version---interleaved ABC notation, as our data representation. In this format, different voices of the same bar are rearranged into a single line and differentiated using voice indicators ''[V:]''. Furthermore, we remove bars with full rests.
             </p>
-            <p>
-              NotaGen utilizes <a href="https://arxiv.org/abs/2410.17584" target="_blank">bar-stream patching</a> and the <a href="https://arxiv.org/abs/2301.02884" target="_blank">Tunesformer</a> architecture. It consists of two hierarchical GPT-2 decoders: a patch-level decoder and a character-level decoder. Each patch is flattened by concatenating one-hot character vectors and then passed through a linear layer to obtain the patch embedding. The patch-level decoder captures the temporal relationships among patches, and its final hidden states are passed to the character-level decoder, which auto-regressively predicts the characters of the next patch.
-            </p>
           </div>
       </div>
     </div>
   </div>
 </section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <div class="container"style="max-width: 1000px; margin: 50px;">
+          <h2 class="title is-3">Model Architecture</h2>
+          <br>
+          <div style="display: flex; justify-content: center">
+            <img src="static/images/model/model-architecture.png" 
+                 alt="model-architecture" 
+                 style="width: 70%; height: auto">
+           </div>
+           <br>
+            <div class="content has-text-justified" style="font-size: 20px;">
+              <p>
+                NotaGen utilizes <a href="https://arxiv.org/abs/2410.17584" target="_blank">bar-stream patching</a> and the <a href="https://arxiv.org/abs/2301.02884" target="_blank">Tunesformer</a> architecture. It consists of two hierarchical GPT-2 decoders: a patch-level decoder and a character-level decoder. Each patch is flattened by concatenating one-hot character vectors and then passed through a linear layer to obtain the patch embedding. The patch-level decoder captures the temporal relationships among patches, and its final hidden states are passed to the character-level decoder, which auto-regressively predicts the characters of the next patch.
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
 <!-- End Data Representation and Model Architecture -->
 
-<!-- Pre-training and Fine-tuning -->
+<!-- Training Paradigms -->
 <section class="hero is-small">
-<br>
+  <br>
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <div class="container" style="max-width: 1100px; margin: 50px;">
-        <h2 class="title is-3">Pre-training and Fine-tuning</h2>
+      <div class="container" style="max-width: 1000px; margin: 50px;">
+        <h2 class="title is-3">Training Paradigms</h2>
         <br>
-          <div class="content has-text-justified">
-            <p>
-              NotaGen is pre-trained on 1.6M pieces of music. This corpus covers a wide range of genres and periods, enabling NotaGen to capture fundamental musical structures and patterns through next-token prediction.
-            </p>
-            <p>
-              NotaGen is fine-tuned on high-quality classical music sheet data to further enhance musicality in generation. We curated a fine-tuning dataset comprising 8,948 classical music sheets and covering 152 composers, from <a href="https://github.com/DCMLab/dcml_corpora" target="_blank">DCML corpora</a>, <a href="https://github.com/OpenScore/StringQuartets" target="_blank">OpenScore String Quartet Corpus</a>, <a href="https://github.com/OpenScore/Lieder" target="_blank">OpenScore Lieder Corpus</a>, <a href="https://github.com/tangjjbetsy/ATEPP" target="_blank">ATEPP</a>, <a href="http://kern.ccarh.org/" target="_blank">KernScores</a>, and internal resources. We label all the pieces with 3 periods---Baroque, Classical, and Romantic; 6 instrumentations---Keyboard, Chamber, Orchestral, Art Song, Choral, and Vocal-Orchestral. Each piece is preprended with a ''period-composer-instrumentation'' prompt for conditional generation.
-            </p>
-            <p>
+        <div style="display: flex; justify-content: center">
+          <img src="static/images/model/notagen.png" 
+               alt="model-architecture" 
+               style="width: 70%; height: auto">
+        </div>
+        <div class="content has-text-justified">
+          <!-- Pre-training section -->
+          <h3 class="title is-4">Pre-training</h3>
+          <p style="font-size: 20px;">
+            NotaGen is pre-trained on 1.6M pieces of music. This corpus covers a wide range of genres and periods, enabling NotaGen to capture fundamental musical structures and patterns through next-token prediction.
+          </p>
 
-            </p>
-          </div>
+          <!-- Fine-tuning section -->
+          <h3 class="title is-4">Fine-tuning</h3>
+          <p style="font-size: 20px;">
+            NotaGen is fine-tuned on high-quality classical music sheet data to further enhance musicality in generation. We curated a fine-tuning dataset comprising 8,948 classical music sheets and covering 152 composers, from <a href="https://github.com/DCMLab/dcml_corpora" target="_blank">DCML corpora</a>, <a href="https://github.com/OpenScore/StringQuartets" target="_blank">OpenScore String Quartet Corpus</a>, <a href="https://github.com/OpenScore/Lieder" target="_blank">OpenScore Lieder Corpus</a>, <a href="https://github.com/tangjjbetsy/ATEPP" target="_blank">ATEPP</a>, <a href="http://kern.ccarh.org/" target="_blank">KernScores</a>, and internal resources. We label all the pieces with 3 periods---Baroque, Classical, and Romantic; 6 instrumentations---Keyboard, Chamber, Orchestral, Art Song, Choral, and Vocal-Orchestral. Each piece is preprended with a ''period-composer-instrumentation'' prompt for conditional generation.
+          </p>
+
+          <!-- Reinforcement Learning section -->
+          <h3 class="title is-4">Reinforcement Learning</h3>
+          <p style="font-size: 20px;">
+            To refine both the musicality and the prompt controllability of the fine-tuned NotaGen, we present CLaMP-DPO. This method builds upon the principles of Reinforcement Learning from AI Feedback (RLAIF) and implements <a href="https://arxiv.org/abs/2305.18290" target="_blank">Direct Preference Optimization (DPO)</a>. In CLaMP-DPO, <a href="https://arxiv.org/abs/2410.13267" target="_blank">CLaMP 2</a>, a multimodal symbolic music information retrieval model, serves as the evaluator within the DPO framework, distinguishing between chosen and rejected musical outputs to optimize NotaGen. Our experiments demonstrated that CLaMP-DPO efficiently enhanced both the controllability and the musicality across different symbolic music generation models, irrespective of their data modalities, encoding schemes, or model architectures. This underscores CLaMP-DPO's broad applicability and potential for auto-regressively trained symbolic music generation models.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- End re-training and Fine-tuning -->
 
 
 <!-- Image carousel -->
 <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container" style="max-width: 1100px; margin: auto;">
+  <div class="hero-body" >
+    <div class="container" style="max-width:900px; margin: auto;" >
+      <h2 class="title is-3 has-text-centered" >Composers and Their Works Collected for NotaGen</h2>
       <div id="results-carousel" class="carousel results-carousel">
 
         <div class="composer-container" >
@@ -242,12 +273,8 @@
           <div class="composer-info">
             <div class="bio-section">
                 <h2>Bach, Johann Sebastian</h2>
-                <div class="bio-text">
-                    <p>Johann Sebastian Bach (1685-1750) is a prolific German composer of the Baroque era. He revolutionized Western music through his contrapuntal mastery and harmonic innovations. His seminal works span sacred cantatas, orchestral suites, keyboard masterpieces, and monumental choral compositions. </p>
-                </div>
             </div>
             <div class="works-section">
-                <h3>Works Collected for NotaGen</h3>
                 <ul class="works-list">
                     <li>Inventions and Sinfonias, BWV 772-801</li>
                     <li>6 English Suites, BWV 806-811</li>
@@ -269,12 +296,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Vivaldi, Antonio</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Antonio Vivaldi (1678-1741), a pioneering Italian Baroque composer and virtuoso violinist, revolutionized instrumental music through his vibrant concerto form, exemplified by The Four Seasons—a landmark programmatic work. Known as "The Red Priest" for his flaming hair and clerical career, his over 500 concertos and sacred choral works blend technical brilliance with dramatic storytelling.</p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>12 Violin Sonatas, Op.2</li>
                   <li>12 Concertos for Strings</li>
@@ -292,12 +319,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Haydn, Joseph</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Joseph Haydn (1732-1809), the Austrian "Father of the Symphony" and "Father of the String Quartet," shaped Classical-era music through 104 symphonies and 68 quartets that defined these genres. Haydn's disciplined craftsmanship and mentorship of Mozart/Beethoven solidified his legacy as a foundational architect of Viennese Classicism.</p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Symphony No.94 in G major, Hob.I:94</li>
                   <li>Symphony No.104 in D major, Hob.I:104</li>
@@ -319,12 +346,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Mozart, Wolfgang Amadeus</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Wolfgang Amadeus Mozart (1756-1791), the Austrian child prodigy and pinnacle of Classical-era composition, mastered every musical form—from operas to symphonies and piano concertos—with unparalleled melodic genius. His seamless fusion of lyrical elegance and structural precision bridged Baroque complexity and Romantic expressiveness. </p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Symphony No.39 in E-flat major, K.543</li>
                   <li>Symphony No.40 in G minor, K.550</li>
@@ -346,12 +373,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Beethoven, Ludwig van</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Ludwig van Beethoven (1770-1827), a towering figure in Western music, bridged the Classical and Romantic eras with his bold innovations and emotional intensity. His life and art, marked by personal struggle and creative triumph, continue to symbolize the transformative power of human resilience and artistic vision. </p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Symphony No.5, Op.67</li>
                   <li>Symphony No.6, Op.68</li>
@@ -373,12 +400,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Schubert, Franz</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Franz Schubert (1797-1828), the Austrian composer of the late Classical and early Romantic eras, is celebrated for his gift for melody and prolific output. A master of Lieder (art songs), he elevated the genre to new poetic heights, while his symphonies, chamber works, and piano pieces reveal a profound emotional range. </p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Die schöne Müllerin, D.795</li>
                   <li>Winterreise, D.911</li>
@@ -398,12 +425,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Schumann, Robert</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Robert Schumann (1810-1856), a leading Romantic composer, infused his music with literary imagination and emotional intensity, creating works that bridged poetry and sound. Known for his innovative piano cycles and lieder, he expanded the expressive possibilities of these forms through intricate harmonies and narrative structures. His symphonies, chamber music, and solo piano works, characterized by their lyrical beauty and introspective depth, solidified his legacy as a visionary of 19th-century music. </p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Kinderszenen, Op.15</li>
                   <li>Kreisleriana, Op.16</li>
@@ -423,12 +450,12 @@
         <div class="composer-info">
           <div class="bio-section">
               <h2>Brahms, Johannes</h2>
-              <div class="bio-text">
+              <!-- <div class="bio-text">
                   <p>Johannes Brahms (1833-1897), a German composer of the Romantic era, is renowned for his synthesis of Classical forms and Romantic expressiveness. His music, characterized by rich harmonies, intricate counterpoint, and emotional depth, spans symphonies, chamber works, piano compositions, and lieder. Often seen as Beethoven's spiritual successor, Brahms balanced tradition and innovation, leaving a legacy of meticulously crafted works that continue to define the Romantic canon. </p>
-              </div>
+              </div> -->
           </div>
           <div class="works-section">
-              <h3>Works Collected for NotaGen</h3>
+              <!-- <h3>Works Collected for NotaGen</h3> -->
               <ul class="works-list">
                   <li>Symphony No.3, Op.90</li>
                   <li>Symphony No.4, Op.98</li>
@@ -449,26 +476,6 @@
 <!-- End image carousel -->
 
 
-<!-- Reinforcement Learning -->
-<section class="hero is-small">
-<br>
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <div class="container"style="max-width: 1100px; margin: 50px;">
-        <h2 class="title is-3">Reinforcement Learning (CLaMP-DPO)</h2>
-        <br>
-          <div class="content has-text-justified">
-            <p>
-              To refine both the musicality and the prompt controllability of the fine-tuned NotaGen, we present CLaMP-DPO. This method builds upon the principles of Reinforcement Learning from AI Feedback (RLAIF) and implements <a href="https://arxiv.org/abs/2305.18290" target="_blank">Direct Preference Optimization (DPO)</a>.  In CLaMP-DPO, CLaMP 2 serves as the evaluator within the DPO framework, distinguishing between chosen and rejected musical outputs to optimize NotaGen.
-            </p>
-            <p>
-              Our experiments demonstrated that CLaMP-DPO efficiently enhanced both the controllability and the musicality across different symbolic music generation models, irrespective of their data modalities, encoding schemes, or model architectures. This underscores CLaMP-DPO's broad applicability and potential for auto-regressively trained symbolic music generation models.
-            </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Reinforcement Learning -->
 
 
 <section class="hero is-small is-light">
@@ -483,7 +490,7 @@
             <h2 class="video-title" id="videoTitle1"></h2>
             <div class="video-container">
                 <iframe id="ytplayer1" allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
                 </iframe>
             </div>
             <button class="arrow-btn prev" id="prevBtn1">◀</button>
@@ -495,12 +502,57 @@
             <h2 class="video-title" id="videoTitle2"></h2>
             <div class="video-container">
                 <iframe id="ytplayer2" allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
                 </iframe>
             </div>
             <button class="arrow-btn prev" id="prevBtn2">◀</button>
             <button class="arrow-btn next" id="nextBtn2">▶</button>
           </div>
+
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle3"></h2>
+            <div class="video-container">
+                <iframe id="ytplayer3" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+            <button class="arrow-btn prev" id="prevBtn3">◀</button>
+            <button class="arrow-btn next" id="nextBtn3">▶</button>
+          </div>
+
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle4"></h2>
+            <div class="video-container">
+                <iframe id="ytplayer4" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+            <button class="arrow-btn prev" id="prevBtn4">◀</button>
+            <button class="arrow-btn next" id="nextBtn4">▶</button>
+          </div>
+
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle5"></h2>
+            <div class="video-container">
+                <iframe id="ytplayer5" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+            <button class="arrow-btn prev" id="prevBtn5">◀</button>
+            <button class="arrow-btn next" id="nextBtn5">▶</button>
+          </div>
+
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle6"></h2>
+            <div class="video-container">
+                <iframe id="ytplayer6" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+            <button class="arrow-btn prev" id="prevBtn6">◀</button>
+            <button class="arrow-btn next" id="nextBtn6">▶</button>
+          </div>
+
           </section>
         </div>
       </div>
@@ -566,14 +618,67 @@
   // 第二个播放器配置（使用不同视频）
   const player2 = {
       videos: [
-          { id: '-Vm2sNCkzSo', title: '热门MV' },
-          { id: 'H5v3kku4y6Q', title: '电子音乐' },
-          { id: 'kJQP7kiw5Fk', title: '全球热单' }
+          { id: 'KnOpafgbnH0', title: 'Chamber' },
+          { id: 'yFyD9epcHmM', title: 'Chamber' },
+          { id: '2LdllqS2q6M', title: 'Chamber' },
+          { id: 'hey7udlQ88E', title: 'Chamber' },
+          { id: '-oGPukO4-k4', title: 'Chamber' },
       ],
       currentIndex: 0,
       player: document.getElementById('ytplayer2'),
       title: document.getElementById('videoTitle2')
   };
+
+  const player3 = {
+      videos: [
+          { id: 'CwycxdNT-z8', title: 'Orchestral' },
+          { id: '3PJxlLFL5Yk', title: 'Orchestral' },
+          { id: 'W4x2QVIEP6w', title: 'Orchestral' },
+          { id: 'Wlmm2nXqqnc', title: 'Orchestral' },
+          { id: 'mEhOWLenPQw', title: 'Orchestral' },
+          { id: 'KBWR30O3Z1o', title: 'Orchestral' },
+          { id: 'ShhXe60ionE', title: 'Orchestral' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer3'),
+      title: document.getElementById('videoTitle3')
+  };
+
+  const player4 = {
+      videos: [
+          { id: 'U6717RmB8Ws', title: 'Art Song' },
+          { id: 'ir_h5JrFlgs', title: 'Art Song' },
+          { id: 'JaOd-3oseHg', title: 'Art Song' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer4'),
+      title: document.getElementById('videoTitle4')
+  };
+
+
+  const player5 = {
+      videos: [
+          { id: 'hiqaIJitm9o', title: 'Choral' },
+          { id: '1kGTV_BQOew', title: 'Choral' },
+          { id: 's1qTGrr1vLY', title: 'Choral' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer5'),
+      title: document.getElementById('videoTitle5')
+  };
+
+
+  const player6 = {
+      videos: [
+          { id: 'aM8FMElyqek', title: 'Vocal-Orchestral' },
+          { id: 'hzs14z67Irc', title: 'Vocal-Orchestral' },
+          { id: '_C2fT33M-0I', title: 'Vocal-Orchestral' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer6'),
+      title: document.getElementById('videoTitle6')
+  };
+
 
   // 通用加载函数
   function loadVideo(playerObj, index) {
@@ -598,13 +703,45 @@
       loadVideo(player2, player2.currentIndex + 1);
   });
 
+  document.getElementById('prevBtn3').addEventListener('click', () => {
+      loadVideo(player3, player3.currentIndex - 1);
+  });
+  document.getElementById('nextBtn3').addEventListener('click', () => {
+      loadVideo(player3, player3.currentIndex + 1);
+  });
+
+  document.getElementById('prevBtn4').addEventListener('click', () => {
+      loadVideo(player4, player4.currentIndex - 1);
+  });
+  document.getElementById('nextBtn4').addEventListener('click', () => {
+      loadVideo(player4, player4.currentIndex + 1);
+  });
+
+  document.getElementById('prevBtn5').addEventListener('click', () => {
+      loadVideo(player5, player5.currentIndex - 1);
+  });
+  document.getElementById('nextBtn5').addEventListener('click', () => {
+      loadVideo(player5, player5.currentIndex + 1);
+  });
+
+  document.getElementById('prevBtn6').addEventListener('click', () => {
+      loadVideo(player6, player6.currentIndex - 1);
+  });
+  document.getElementById('nextBtn6').addEventListener('click', () => {
+      loadVideo(player6, player6.currentIndex + 1);
+  });
   // 初始化两个播放器
   loadVideo(player1, 0);
   loadVideo(player2, 0);
+  loadVideo(player3, 0);
+  loadVideo(player4, 0);
+  loadVideo(player5, 0);
+  loadVideo(player6, 0);
+
 
   const ap = new APlayer({
   container: document.getElementById('aplayer'),
-  autoplay: true, // 设置为 true 以在加载时自动播放
+  autoplay: false, // 设置为 true 以在加载时自动播放
   fixed: true, 
   theme: '#b7daff', // 设置播放器主题颜色
   loop: 'all', // 设置循环播放模式，'all' 表示循环整个播放列表
