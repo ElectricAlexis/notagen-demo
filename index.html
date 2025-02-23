@@ -59,10 +59,10 @@
             <h1 class="title is-1 publication-title">NotaGen: Advancing Musicality in Symbolic Music Generation with Large Language Model Training Paradigms</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
-              <span class="author-block">Yashan Wang<sup>1</sup>,</span>
-              <span class="author-block">Shangda Wu<sup>1</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=kYjoInQAAAAJ" target="_blank">Yashan Wang</a><sup>1</sup><sup>*</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=xiTqMNYAAAAJ" target="_blank">Shangda Wu</a><sup>1</sup><sup>*</sup>,</span>
               <span class="author-block">Jianhuai Hu<sup>1</sup>,</span>
-              <span class="author-block">Xingjian Du<sup>2</sup>,</span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=UqBl_VMAAAAJ" target="_blank">Xingjian Du</a><sup>2</sup>,</span>
               <span class="author-block">Yueqi Peng<sup>3</sup>,</span>
             </div>
             <div class="is-size-5 publication-authors">
@@ -71,7 +71,7 @@
               <span class="author-block">Shuai Fan<sup>5</sup>,</span>
               <span class="author-block">Xiaobing Li<sup>1</sup>,</span>
               <span class="author-block">Feng Yu<sup>1</sup>,</span>
-              <span class="author-block">Maosong Sun<sup>1,6</sup></span>
+              <span class="author-block"><a href="https://scholar.google.com/citations?user=zIgT0HMAAAAJ" target="_blank">Maosong Sun</a><sup>1,6</sup></span>
             </div>
             <br>
             <div class="is-size-5 publication-authors">
@@ -82,6 +82,10 @@
               <span class="author-block"><sup>4</sup>Independent Researcher,</span><br>
               <span class="author-block"><sup>5</sup>Beihang University, China,</span>
               <span class="author-block"><sup>6</sup>Tsinghua University, China</span><br>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
             </div>
 
 
@@ -190,13 +194,16 @@
             <p>
               <a href="https://abcnotation.com/" target="_blank">ABC notation</a> is a musical notation system that uses a combination of letters, numbers, and symbols to represent musical notes. We adopt a modified version---interleaved ABC notation, as our data representation. In this format, different voices of the same bar are rearranged into a single line and differentiated using voice indicators ''[V:]''. Furthermore, we remove bars with full rests.
             </p>
+            <p style="font-size: 18px; font-style: italic; color: #555;">
+              There have long been misconceptions about the capabilities of ABC notation. For instance, "ABC notation cannot handle multitrack music", "ABC notation is unable to represent complex scores." Actually, ABC is incredibly versatile. Not only can it accommodate multitrack music for any instrumentation, but it can also capture nearly all elements found in Western staff notation system. In addition to notes and rhythms, ABC notation can represent various techniques, expressions, and tempos, as well as flexibly incorporate text annotations.
+            </p>
           </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-small">
+<section class="hero is-small is-light">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
         <div class="container"style="max-width: 1000px; margin: 50px;">
@@ -259,221 +266,7 @@
 <!-- End re-training and Fine-tuning -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body" >
-    <div class="container" style="max-width:900px; margin: auto;" >
-      <h2 class="title is-3 has-text-centered" >Composers and Their Works Collected for NotaGen</h2>
-      <div id="results-carousel" class="carousel results-carousel">
 
-        <div class="composer-container" >
-          <div class="composer-image">
-              <img src="static\images\composers\Johann_Sebastian_Bach.jpg" alt="Bach, Johann Sebastian">
-          </div>
-          <div class="composer-info">
-            <div class="bio-section">
-                <h2>Bach, Johann Sebastian</h2>
-            </div>
-            <div class="works-section">
-                <ul class="works-list">
-                    <li>Inventions and Sinfonias, BWV 772-801</li>
-                    <li>6 English Suites, BWV 806-811</li>
-                    <li>6 French Suites, BWV 812-817</li>
-                    <li>Das wohltemperierte Klavier I & II</li>
-                    <li>6 Cello Suites, BWV 1007-1012</li>
-                    <li>6 Violin Sonatas, BWV 1014-1019</li>
-                    <li>Orchestral Suites, BWV 1066-1069</li>
-                    <li>......</li>
-                </ul>
-            </div>
-          </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\Antonio_Vivaldi.jpg" alt="Vivaldi, Antonio">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Vivaldi, Antonio</h2>
-              <!-- <div class="bio-text">
-                  <p>Antonio Vivaldi (1678-1741), a pioneering Italian Baroque composer and virtuoso violinist, revolutionized instrumental music through his vibrant concerto form, exemplified by The Four Seasons—a landmark programmatic work. Known as "The Red Priest" for his flaming hair and clerical career, his over 500 concertos and sacred choral works blend technical brilliance with dramatic storytelling.</p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>12 Violin Sonatas, Op.2</li>
-                  <li>12 Concertos for Strings</li>
-                  <li>Gloria in D major, RV 589</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\J-haydn.jpg" alt="Haydn, Joseph">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Haydn, Joseph</h2>
-              <!-- <div class="bio-text">
-                  <p>Joseph Haydn (1732-1809), the Austrian "Father of the Symphony" and "Father of the String Quartet," shaped Classical-era music through 104 symphonies and 68 quartets that defined these genres. Haydn's disciplined craftsmanship and mentorship of Mozart/Beethoven solidified his legacy as a foundational architect of Viennese Classicism.</p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Symphony No.94 in G major, Hob.I:94</li>
-                  <li>Symphony No.104 in D major, Hob.I:104</li>
-                  <li>String Quartets, Op.1</li>
-                  <li>String Quartets, Op.9</li>
-                  <li>String Quartets, Op.20</li>
-                  <li>String Quartets, Op.64</li>
-                  <li>Die Schöpfung, Hob.XXI:2</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\mozart.jpg" alt="Mozart, Wolfgang Amadeus">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Mozart, Wolfgang Amadeus</h2>
-              <!-- <div class="bio-text">
-                  <p>Wolfgang Amadeus Mozart (1756-1791), the Austrian child prodigy and pinnacle of Classical-era composition, mastered every musical form—from operas to symphonies and piano concertos—with unparalleled melodic genius. His seamless fusion of lyrical elegance and structural precision bridged Baroque complexity and Romantic expressiveness. </p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Symphony No.39 in E-flat major, K.543</li>
-                  <li>Symphony No.40 in G minor, K.550</li>
-                  <li>Symphony No.41 in C major, K.551</li>
-                  <li>Piano Concerto No.21 in C major, K.467</li>
-                  <li>Clarinet Concerto in A major, K.622</li>
-                  <li>Piano Sonata No.11 in A major, K.331</li>
-                  <li>Ah se in ciel, K.538</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-      
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\Beethoven.jpg" alt="Beethoven, Ludwig van">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Beethoven, Ludwig van</h2>
-              <!-- <div class="bio-text">
-                  <p>Ludwig van Beethoven (1770-1827), a towering figure in Western music, bridged the Classical and Romantic eras with his bold innovations and emotional intensity. His life and art, marked by personal struggle and creative triumph, continue to symbolize the transformative power of human resilience and artistic vision. </p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Symphony No.5, Op.67</li>
-                  <li>Symphony No.6, Op.68</li>
-                  <li>Symphony No.9, Op.125</li>
-                  <li>Piano Sonata No.8, Op.13</li>
-                  <li>Piano Sonata No.14, Op.27, No.2</li>
-                  <li>Große Fuge, Op.133</li>
-                  <li>Coriolan, Op.62</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\Schubert.jpg" alt="Schubert, Franz">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Schubert, Franz</h2>
-              <!-- <div class="bio-text">
-                  <p>Franz Schubert (1797-1828), the Austrian composer of the late Classical and early Romantic eras, is celebrated for his gift for melody and prolific output. A master of Lieder (art songs), he elevated the genre to new poetic heights, while his symphonies, chamber works, and piano pieces reveal a profound emotional range. </p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Die schöne Müllerin, D.795</li>
-                  <li>Winterreise, D.911</li>
-                  <li>Piano Sonata in B-flat major, D.960</li>
-                  <li>4 Impromptus, D.899</li>
-                  <li>String Quartet in D minor, D.810</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\Schumann.jpg" alt="Schumann, Robert">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Schumann, Robert</h2>
-              <!-- <div class="bio-text">
-                  <p>Robert Schumann (1810-1856), a leading Romantic composer, infused his music with literary imagination and emotional intensity, creating works that bridged poetry and sound. Known for his innovative piano cycles and lieder, he expanded the expressive possibilities of these forms through intricate harmonies and narrative structures. His symphonies, chamber music, and solo piano works, characterized by their lyrical beauty and introspective depth, solidified his legacy as a visionary of 19th-century music. </p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Kinderszenen, Op.15</li>
-                  <li>Kreisleriana, Op.16</li>
-                  <li>Myrthen, Op.25</li>
-                  <li>Dichterliebe, Op.48</li>
-                  <li>String Quartet No.1, Op.41 No.1</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="composer-container">
-        <div class="composer-image">
-            <img src="static\images\composers\Brahms.jpg" alt="Brahms, Johannes">
-        </div>
-        <div class="composer-info">
-          <div class="bio-section">
-              <h2>Brahms, Johannes</h2>
-              <!-- <div class="bio-text">
-                  <p>Johannes Brahms (1833-1897), a German composer of the Romantic era, is renowned for his synthesis of Classical forms and Romantic expressiveness. His music, characterized by rich harmonies, intricate counterpoint, and emotional depth, spans symphonies, chamber works, piano compositions, and lieder. Often seen as Beethoven's spiritual successor, Brahms balanced tradition and innovation, leaving a legacy of meticulously crafted works that continue to define the Romantic canon. </p>
-              </div> -->
-          </div>
-          <div class="works-section">
-              <!-- <h3>Works Collected for NotaGen</h3> -->
-              <ul class="works-list">
-                  <li>Symphony No.3, Op.90</li>
-                  <li>Symphony No.4, Op.98</li>
-                  <li>String Sextet No.1, Op.18</li>
-                  <li>3 Intermezzi, Op.117</li>
-                  <li>4 Serious Songs, Op.121</li>
-                  <li>......</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-
-      
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
 
 
@@ -553,12 +346,523 @@
             <button class="arrow-btn next" id="nextBtn6">▶</button>
           </div>
 
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle7"></h2>
+            <div class="content has-text-justified" style="font-size: 20px;">
+              <p>Thank you for reading this far! In addition to classical music, we have also attempted to fine-tune NotaGen to the pop music style. We used around 100 popular songs from the last century to fine-tune the pre-trained model and applied reinforcement learning. Please enjoy a pop song composed by NotaGen! (This video is a screenshot from the Musescore Software.)</p>
+            </div>
+            <div class="video-container">
+                <iframe id="ytplayer7" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+          </div>
+
           </section>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body" >
+    <div class="container" style="max-width:900px; margin: auto;" >
+      <h2 class="title is-3 has-text-centered" >Acknowledgement</h2>
+      <h3 class="title is-4 has-text-centered" >Composers and Their Works Collected for NotaGen</h3>
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="composer-container" >
+          <div class="composer-image">
+              <img src="static\images\composers\Johann_Sebastian_Bach.jpg" alt="Bach, Johann Sebastian">
+          </div>
+          <div class="composer-info">
+            <div class="bio-section">
+                <h2>Bach, Johann Sebastian</h2>
+            </div>
+            <div class="works-section">
+                <ul class="works-list">
+                    <li>Inventions and Sinfonias, BWV 772-801</li>
+                    <li>6 English Suites, BWV 806-811</li>
+                    <li>6 French Suites, BWV 812-817</li>
+                    <li>Das wohltemperierte Klavier I & II</li>
+                    <li>6 Cello Suites, BWV 1007-1012</li>
+                    <li>6 Violin Sonatas, BWV 1014-1019</li>
+                    <li>Orchestral Suites, BWV 1066-1069</li>
+                    <li>......</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer-container" >
+          <div class="composer-image">
+              <img src="static\images\composers\corelli.jpg" alt="Corelli, Arcangelo">
+          </div>
+          <div class="composer-info">
+            <div class="bio-section">
+                <h2>Corelli, Arcangelo</h2>
+            </div>
+            <div class="works-section">
+                <ul class="works-list">
+                    <li>12 Trio Sonatas, Op.1</li>
+                    <li>12 Trio Sonatas, Op.3</li>
+                    <li>12 Trio Sonatas, Op.4</li>
+                    <li>12 Violin Sonatas, Op.5</li>
+                    <li>12 Concerti grossi, Op.6</li>
+                    <li>......</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Antonio_Vivaldi.jpg" alt="Vivaldi, Antonio">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Vivaldi, Antonio</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>12 Violin Sonatas, Op.2</li>
+                  <li>12 Concertos for Strings</li>
+                  <li>Violin Concerto in E major, RV 269 (Spring)</li>
+                  <li>Violin Concerto in F major, RV 293 (Autumn)</li>
+                  <li>Violin Concerto in F minor, RV 297 (Winter)</li>
+                  <li>Violin Concerto in G minor, RV 315 (Summer)</li>
+                  <li>Gloria in D major, RV 589</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\J-haydn.jpg" alt="Haydn, Joseph">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Haydn, Joseph</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Symphony No.94 in G major, Hob.I:94</li>
+                  <li>Symphony No.104 in D major, Hob.I:104</li>
+                  <li>String Quartets, Op.1</li>
+                  <li>String Quartets, Op.9</li>
+                  <li>String Quartets, Op.20</li>
+                  <li>String Quartets, Op.64</li>
+                  <li>Die Schöpfung, Hob.XXI:2</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\mozart.jpg" alt="Mozart, Wolfgang Amadeus">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Mozart, Wolfgang Amadeus</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Symphony No.39 in E-flat major, K.543</li>
+                  <li>Symphony No.40 in G minor, K.550</li>
+                  <li>Symphony No.41 in C major, K.551</li>
+                  <li>Piano Concerto No.21 in C major, K.467</li>
+                  <li>Clarinet Concerto in A major, K.622</li>
+                  <li>Piano Sonata No.11 in A major, K.331</li>
+                  <li>Ah se in ciel, K.538</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Beethoven.jpg" alt="Beethoven, Ludwig van">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Beethoven, Ludwig van</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Symphony No.5, Op.67</li>
+                  <li>Symphony No.6, Op.68</li>
+                  <li>Symphony No.9, Op.125</li>
+                  <li>Piano Sonata No.8, Op.13</li>
+                  <li>Piano Sonata No.14, Op.27, No.2</li>
+                  <li>Große Fuge, Op.133</li>
+                  <li>Coriolan, Op.62</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Schubert.jpg" alt="Schubert, Franz">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Schubert, Franz</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Die schöne Müllerin, D.795</li>
+                  <li>Winterreise, D.911</li>
+                  <li>4 Impromptus, D.899</li>
+                  <li>Piano Sonata in B-flat major, D.960</li>
+                  <li>String Quartet in D minor, D.810</li>
+                  <li>Piano Quintet in A major, D.667</li>
+                  <li>Symphony No.9, D.944</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Schumann.jpg" alt="Schumann, Robert">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Schumann, Robert</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Papillons, Op.2</li>
+                  <li>Kinderszenen, Op.15</li>
+                  <li>Kreisleriana, Op.16</li>
+                  <li>Myrthen, Op.25</li>
+                  <li>Dichterliebe, Op.48</li>
+                  <li>String Quartet No.1, Op.41 No.1</li>
+                  <li>Album für die Jugend, Op.68</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Mendelssohn.jpg" alt="Mendelssohn, Felix">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Mendelssohn, Felix</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Lieder ohne Worte, Op.53</li>
+                  <li>Lieder ohne Worte, Op.38</li>
+                  <li>Lieder ohne Worte, Op.62</li>
+                  <li>Lieder ohne Worte, Op.102</li>
+                  <li>Violin Concerto, Op.64</li>
+                  <li>String Quartet No.6, Op.80</li>
+                  <li>6 Gesänge, Op.86</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Brahms.jpg" alt="Brahms, Johannes">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Brahms, Johannes</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Symphony No.3, Op.90</li>
+                  <li>Symphony No.4, Op.98</li>
+                  <li>Violin Concerto, Op.77</li>
+                  <li>String Sextet No.1, Op.18</li>
+                  <li>3 Intermezzi, Op.117</li>
+                  <li>4 Serious Songs, Op.121</li>
+                  <li>21 Hungarian Dances (Piano), WoO 1</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Chopin.jpg" alt="Chopin, Frédéric">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Chopin, Frédéric</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Études, Op.10</li>
+                  <li>Études, Op.25</li>
+                  <li>Preludes, Op.28</li>
+                  <li>Piano Concerto No.1, Op.11</li>
+                  <li>Nocturnes, Op.9</li>
+                  <li>Mazurkas, Op.24</li>
+                  <li>Waltzes, Op.34</li>
+                  <li>Polish Songs, Op.74</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\liszt.png" alt="Liszt, Franz">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Liszt, Franz</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Étude en douze exercices, S.136</li>
+                  <li>Grandes études, S.137</li>
+                  <li>Études d'exécution transcendante, S.139</li>
+                  <li>Grandes études de Paganini, S.141</li>
+                  <li>Années de pèlerinage I, S.160</li>
+                  <li>Années de pèlerinage II, S.161</li>
+                  <li>Années de pèlerinage II, Supplément, S.162</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Tchaikovsky.jpg" alt="Tchaikovsky, Pyotr">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Tchaikovsky, Pyotr</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Romance, Op.5</li>
+                  <li>Violin Concerto, Op.35</li>
+                  <li>The Seasons, Op.37a</li>
+                  <li>Children's Album, Op.39</li>
+                  <li>Suite No.1, Op.43</li>
+                  <li>Serenade for String Orchestra, Op.48</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Dvorak.jpg" alt="Dvořák, Antonín">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Dvořák, Antonín</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Silhouettes, Op.8</li>
+                  <li>Serenade for Strings, Op.22</li>
+                  <li>Slavonic Dances, Op.46</li>
+                  <li>Stabat Mater, Op.58</li>
+                  <li>Symphony No.9, Op.95</li>
+                  <li>String Quartet No.12, Op.96</li>
+                  <li>8 Humoresques, Op.101</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Grieg.jpg" alt="Grieg, Edvard">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Grieg, Edvard</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Lyric Pieces, Op.12</li>
+                  <li>Peer Gynt, Op.23</li>
+                  <li>Lyric Pieces, Op.38</li>
+                  <li>Lyric Pieces, Op.43</li>
+                  <li>Peer Gynt Suite No.1, Op.46</li>
+                  <li>Lyric Pieces, Op.47</li>
+                  <li>Lyric Pieces, Op.54</li>
+                  <li>19 Norwegian Folk Tunes, Op.66</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\faure.jpg" alt="Fauré, Gabriel">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Fauré, Gabriel</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>3 Songs, Op.7</li>
+                  <li>Piano Quartet No.1, Op.15</li>
+                  <li>4 Songs, Op.51</li>
+                  <li>Dolly Suite, Op.56</li>
+                  <li>5 Mélodies, Op.58</li>
+                  <li>Piano Quintet No.1, Op.89</li>
+                  <li>Piano Quintet No.2, Op.115</li>
+                  <li>String Quartet, Op.121</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Debussy.jpg" alt="Debussy, Claude">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Debussy, Claude</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Ariettes oubliées</li>
+                  <li>Petite suite</li>
+                  <li>2 Arabesques</li>
+                  <li>Suite bergamasque</li>
+                  <li>String Quartet in G minor, Op.10</li>
+                  <li>Estampes</li>
+                  <li>Préludes, Livre 1</li>
+                  <li>Préludes, Livre 2</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\ravel.jpg" alt="Ravel, Maurice">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Ravel, Maurice</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Pavane pour une infante défunte, M.19</li>
+                  <li>Jeux d'eau, M.30 </li>
+                  <li>String Quartet in F major, M.35</li>
+                  <li>Miroirs, M.43</li>
+                  <li>Gaspard de la nuit, M.55</li>
+                  <li>Valses nobles et sentimentales, M.61</li>
+                  <li>Le tombeau de Couperin, M.68</li>
+                  <li>La valse, M.72</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Rachmaninov.jpg" alt="Rachmaninoff, Sergei">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Rachmaninoff, Sergei</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>Morceaux de fantaisie, Op.3</li>
+                  <li>7 Morceaux de salon, Op.10</li>
+                  <li>Moments musicaux, Op.16</li>
+                  <li>10 Preludes, Op.23</li>
+                  <li>13 Preludes, Op.32</li>
+                  <li>Etudes-tableaux, Op.33</li>
+                  <li>Piano Sonata No.2, Op.36</li>
+                  <li>Etudes-tableaux, Op.39</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Prokofiev.jpg" alt="Prokofiev, Sergey">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Prokofiev, Sergey</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>4 Etudes, Op.2</li>
+                  <li>Toccata, Op.11</li>
+                  <li>10 Pieces for Piano, Op.12</li>
+                  <li>Visions fugitives, Op.22</li>
+                  <li>Symphony No.1, Op.25</li>
+                  <li>Piano Sonata No.4, Op.29</li>
+                  <li>Music for Children, Op.65</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="composer-container">
+        <div class="composer-image">
+            <img src="static\images\composers\Bartok.jpg" alt="Bartók, Béla">
+        </div>
+        <div class="composer-info">
+          <div class="bio-section">
+              <h2>Bartók, Béla</h2>
+          </div>
+          <div class="works-section">
+              <ul class="works-list">
+                  <li>14 Bagatelles, Op.6</li>
+                  <li>Studies for Piano, Op.18</li>
+                  <li>String Quartet No.1, Sz.40</li>
+                  <li>For Children, Sz.42</li>
+                  <li>Piano Sonata, Sz.80</li>
+                  <li>......</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
 
 
 
@@ -577,13 +881,11 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-
         </div>
       </div>
     </div>
@@ -679,6 +981,15 @@
       title: document.getElementById('videoTitle6')
   };
 
+  const player7 = {
+      videos: [
+          { id: 'Q4hPVA6X0Ak', title: 'Bonus! Pop' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer7'),
+      title: document.getElementById('videoTitle7')
+  };
+
 
   // 通用加载函数
   function loadVideo(playerObj, index) {
@@ -737,6 +1048,8 @@
   loadVideo(player4, 0);
   loadVideo(player5, 0);
   loadVideo(player6, 0);
+  loadVideo(player7, 0);
+
 
 
   const ap = new APlayer({
@@ -746,7 +1059,7 @@
   theme: '#b7daff', // 设置播放器主题颜色
   loop: 'all', // 设置循环播放模式，'all' 表示循环整个播放列表
   preload: 'auto', // 设置预加载模式，'auto' 表示自动预加载
-  volume: 1, // 设置初始音量，范围是 0 到 1
+  volume: 0.7, // 设置初始音量，范围是 0 到 1
   mutex: true, // 设置为 true 以确保同一时间只有一个播放器在播放
   listmaxheight: '513px', // 设置播放列表的最大高度
   storageName: 'aplayer', // 设置播放器的本地存储名称
