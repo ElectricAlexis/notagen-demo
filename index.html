@@ -91,27 +91,17 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <!-- <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span> -->
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>NotaGen Paper</span>
+                </a>
+              </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -120,18 +110,22 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>NotaGen Code</span>
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <!-- Hugging Face link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/ElectricOnes/NotaGen" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span> -->
+                    <span class="icon">
+                      <i class="emoji-icon">🤗</i> <!-- 使用Hugging Face经典表情符号 -->
+                    </span>
+                    <span>NotaGen Weights</span>
+                  </a>
+                </span>
+
+
                 </a>
               </span>
             </div>
@@ -151,7 +145,7 @@
       </h1>
       <br>
       <h2 style="font-size: 18px; font-weight: 500; color: #7f8c8d;">
-        (All videos and audio on this page are rendered and exported using Sibelius + NotePerformer.)
+        (Videos and audio on this page are rendered and exported using Sibelius + NotePerformer.)
       </h2>
     </div>
   </div>
@@ -167,7 +161,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="font-size: 20px;">
           <p>
-            We introduce NotaGen, a symbolic music generation model aims to explore the potential of producing high-quality classical sheet music. Inspired by the success of Large Language Models (LLMs), NotaGen adopts pre-training, fine-tuning, and reinforcement learning paradigms (henceforth referred to as the LLM training paradigms). It is pre-trained on 1.6M pieces of music, and then fine-tuned on approximately 9K high-quality classical compositions conditioned on ``period-composer-instrumentation''  prompts. For reinforcement learning, we propose the CLaMP-DPO method, which further enhances generation quality and controllability without requiring human annotations or predefined rewards. Our experiments demonstrate the efficacy of CLaMP-DPO in symbolic music generation models with different architectures and encoding schemes. Furthermore, subjective A/B tests show that NotaGen outperforms baseline models against human compositions, greatly advancing musical aesthetics in symbolic music generation.
+            We introduce <b>NotaGen</b>, a symbolic music generation model aims to <b>explore the potential of producing high-quality classical sheet music</b>. Inspired by the success of Large Language Models (LLMs), NotaGen adopts <b>pre-training</b>, <b>fine-tuning</b>, and <b>reinforcement learning</b> paradigms (henceforth referred to as the LLM training paradigms). It is pre-trained on 1.6M pieces of music, and then fine-tuned on approximately 9K high-quality classical compositions conditioned on ``period-composer-instrumentation''  prompts. For reinforcement learning, we propose the <b>CLaMP-DPO</b> method, which further enhances generation quality and controllability without requiring human annotations or predefined rewards. Our experiments demonstrate the efficacy of CLaMP-DPO in symbolic music generation models with different architectures and encoding schemes. Furthermore, subjective A/B tests show that NotaGen outperforms baseline models against human compositions, greatly advancing musical aesthetics in symbolic music generation.
           </p>
         </div>
       </div>
@@ -192,10 +186,10 @@
          <br>
           <div class="content has-text-justified" style="font-size: 20px;">
             <p>
-              <a href="https://abcnotation.com/" target="_blank">ABC notation</a> is a musical notation system that uses a combination of letters, numbers, and symbols to represent musical notes. We adopt a modified version---interleaved ABC notation, as our data representation. In this format, different voices of the same bar are rearranged into a single line and differentiated using voice indicators ''[V:]''. Furthermore, we remove bars with full rests.
+              <a href="https://abcnotation.com/" target="_blank">ABC notation</a> is a musical notation system that uses a combination of letters, numbers, and symbols to represent musical notes. We adopt a modified version---<b>interleaved ABC notation</b>, as our data representation. In this format, different voices of the same bar are rearranged into a single line and differentiated using voice indicators ''[V:]''. Furthermore, we remove bars with full rests.
             </p>
             <p style="font-size: 18px; font-style: italic; color: #555;">
-              There have long been misconceptions about the capabilities of ABC notation. For instance, "ABC notation cannot handle multitrack music", "ABC notation is unable to represent complex scores." Actually, ABC is incredibly versatile. Not only can it accommodate multitrack music for any instrumentation, but it can also capture nearly all elements found in Western staff notation system. In addition to notes and rhythms, ABC notation can represent various techniques, expressions, and tempos, as well as flexibly incorporate text annotations.
+              There have long been misconceptions about the capabilities of ABC notation. For instance, "ABC notation cannot handle multitrack music", "ABC notation is unable to represent complex scores". Actually, ABC is incredibly versatile. Not only can it accommodate multitrack music for any instrumentation, but it can also capture nearly all elements found in Western staff notation system. In addition to notes and rhythms, ABC notation can represent various techniques, expressions, and tempos, as well as flexibly incorporate text annotations.
             </p>
           </div>
       </div>
@@ -203,7 +197,7 @@
   </div>
 </section>
 
-<section class="hero is-small is-light">
+<section class="hero is-small">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
         <div class="container"style="max-width: 1000px; margin: 50px;">
@@ -217,7 +211,7 @@
            <br>
             <div class="content has-text-justified" style="font-size: 20px;">
               <p>
-                NotaGen utilizes <a href="https://arxiv.org/abs/2410.17584" target="_blank">bar-stream patching</a> and the <a href="https://arxiv.org/abs/2301.02884" target="_blank">Tunesformer</a> architecture. It consists of two hierarchical GPT-2 decoders: a patch-level decoder and a character-level decoder. Each patch is flattened by concatenating one-hot character vectors and then passed through a linear layer to obtain the patch embedding. The patch-level decoder captures the temporal relationships among patches, and its final hidden states are passed to the character-level decoder, which auto-regressively predicts the characters of the next patch.
+                NotaGen utilizes the <a href="https://arxiv.org/abs/2301.02884" target="_blank">Tunesformer</a> architecture and <a href="https://arxiv.org/abs/2410.17584" target="_blank">bar-stream patching</a>. It consists of two hierarchical GPT-2 decoders: a <b>patch-level decoder</b> and a <b>character-level decoder</b>. Each patch is flattened by concatenating one-hot character vectors and then passed through a linear layer to obtain the patch embedding. The patch-level decoder captures the temporal relationships among patches, and its final hidden states are passed to the character-level decoder, which auto-regressively predicts the characters of the next patch.
               </p>
             </div>
         </div>
@@ -243,19 +237,19 @@
           <!-- Pre-training section -->
           <h3 class="title is-4">Pre-training</h3>
           <p style="font-size: 20px;">
-            NotaGen is pre-trained on 1.6M pieces of music. This corpus covers a wide range of genres and periods, enabling NotaGen to capture fundamental musical structures and patterns through next-token prediction.
+            NotaGen is pre-trained on <b>1.6M pieces of music</b>. This corpus covers a wide range of genres and periods, enabling NotaGen to capture fundamental musical structures and patterns through next-token prediction.
           </p>
 
           <!-- Fine-tuning section -->
           <h3 class="title is-4">Fine-tuning</h3>
           <p style="font-size: 20px;">
-            NotaGen is fine-tuned on high-quality classical music sheet data to further enhance musicality in generation. We curated a fine-tuning dataset comprising 8,948 classical music sheets and covering 152 composers, from <a href="https://github.com/DCMLab/dcml_corpora" target="_blank">DCML corpora</a>, <a href="https://github.com/OpenScore/StringQuartets" target="_blank">OpenScore String Quartet Corpus</a>, <a href="https://github.com/OpenScore/Lieder" target="_blank">OpenScore Lieder Corpus</a>, <a href="https://github.com/tangjjbetsy/ATEPP" target="_blank">ATEPP</a>, <a href="http://kern.ccarh.org/" target="_blank">KernScores</a>, and internal resources. We label all the pieces with 3 periods---Baroque, Classical, and Romantic; 6 instrumentations---Keyboard, Chamber, Orchestral, Art Song, Choral, and Vocal-Orchestral. Each piece is preprended with a ''period-composer-instrumentation'' prompt for conditional generation.
+            NotaGen is fine-tuned on high-quality classical music sheet data to further enhance musicality in generation. We curated a fine-tuning dataset comprising <b>8,948 classical music sheets</b> and covering <b>152 composers</b>, from <a href="https://github.com/DCMLab/dcml_corpora" target="_blank">DCML corpora</a>, <a href="https://github.com/OpenScore/StringQuartets" target="_blank">OpenScore String Quartet Corpus</a>, <a href="https://github.com/OpenScore/Lieder" target="_blank">OpenScore Lieder Corpus</a>, <a href="https://github.com/tangjjbetsy/ATEPP" target="_blank">ATEPP</a>, <a href="http://kern.ccarh.org/" target="_blank">KernScores</a>, and internal resources. We label all the pieces with <b>3 periods</b>---Baroque, Classical, and Romantic; <b>6 instrumentations</b>---Keyboard, Chamber, Orchestral, Art Song, Choral, and Vocal-Orchestral. Each piece is preprended with a <b>''period-composer-instrumentation''</b> prompt for conditional generation.
           </p>
 
           <!-- Reinforcement Learning section -->
           <h3 class="title is-4">Reinforcement Learning</h3>
           <p style="font-size: 20px;">
-            To refine both the musicality and the prompt controllability of the fine-tuned NotaGen, we present CLaMP-DPO. This method builds upon the principles of Reinforcement Learning from AI Feedback (RLAIF) and implements <a href="https://arxiv.org/abs/2305.18290" target="_blank">Direct Preference Optimization (DPO)</a>. In CLaMP-DPO, <a href="https://arxiv.org/abs/2410.13267" target="_blank">CLaMP 2</a>, a multimodal symbolic music information retrieval model, serves as the evaluator within the DPO framework, distinguishing between chosen and rejected musical outputs to optimize NotaGen. Our experiments demonstrated that CLaMP-DPO efficiently enhanced both the controllability and the musicality across different symbolic music generation models, irrespective of their data modalities, encoding schemes, or model architectures. This underscores CLaMP-DPO's broad applicability and potential for auto-regressively trained symbolic music generation models.
+            To refine both the musicality and the prompt controllability of the fine-tuned NotaGen, we present <b>CLaMP-DPO</b>. This method builds upon the principles of Reinforcement Learning from AI Feedback (RLAIF) and implements <a href="https://arxiv.org/abs/2305.18290" target="_blank">Direct Preference Optimization (DPO)</a>. In CLaMP-DPO, <a href="https://arxiv.org/abs/2410.13267" target="_blank">CLaMP 2</a>, a multimodal symbolic music information retrieval model, serves as the evaluator within the DPO framework, distinguishing between chosen and rejected musical outputs to optimize NotaGen. Our experiments demonstrated that CLaMP-DPO efficiently enhanced both the controllability and the musicality across different symbolic music generation models, irrespective of their data modalities, encoding schemes, or model architectures. This underscores CLaMP-DPO's broad applicability and potential for <b>auto-regressively trained symbolic music generation models</b>.
           </p>
         </div>
       </div>
@@ -349,7 +343,7 @@
           <div class="player-container">
             <h2 class="video-title" id="videoTitle7"></h2>
             <div class="content has-text-justified" style="font-size: 20px;">
-              <p>Thank you for reading this far! In addition to classical music, we have also attempted to fine-tune NotaGen to the pop music style. We used around 100 popular songs from the last century to fine-tune the pre-trained model and applied reinforcement learning. Please enjoy a pop song composed by NotaGen! (This video is a screenshot from the Musescore Software.)</p>
+              <p>Thank you for reading this far! In addition to classical music, we have also attempted to fine-tune NotaGen to the pop music style. We used around 100 popular songs from the last century to fine-tune the pre-trained model and applied reinforcement learning. Please enjoy a pop song composed by NotaGen! (This video is a screenshot from the Musescore software.)</p>
             </div>
             <div class="video-container">
                 <iframe id="ytplayer7" allowfullscreen
@@ -556,15 +550,15 @@
 
   const ap = new APlayer({
   container: document.getElementById('aplayer'),
-  autoplay: false, // 设置为 true 以在加载时自动播放
+  autoplay: false, 
   fixed: true, 
-  theme: '#b7daff', // 设置播放器主题颜色
-  loop: 'all', // 设置循环播放模式，'all' 表示循环整个播放列表
-  preload: 'auto', // 设置预加载模式，'auto' 表示自动预加载
-  volume: 0.7, // 设置初始音量，范围是 0 到 1
-  mutex: true, // 设置为 true 以确保同一时间只有一个播放器在播放
-  listmaxheight: '513px', // 设置播放列表的最大高度
-  storageName: 'aplayer', // 设置播放器的本地存储名称
+  theme: '#b7daff', 
+  loop: 'all', 
+  preload: 'auto', 
+  volume: 0.7, 
+  mutex: true, 
+  listmaxheight: '513px', 
+  storageName: 'aplayer', 
   audio: [
       {
       name: 'Waltz in F-sharp Minor',
