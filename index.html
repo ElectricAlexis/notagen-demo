@@ -61,7 +61,7 @@
               <!-- Paper authors -->
               <span class="author-block"><a href="https://scholar.google.com/citations?user=kYjoInQAAAAJ" target="_blank">Yashan Wang</a><sup>1</sup><sup>*</sup>,</span>
               <span class="author-block"><a href="https://scholar.google.com/citations?user=xiTqMNYAAAAJ" target="_blank">Shangda Wu</a><sup>1</sup><sup>*</sup>,</span>
-              <span class="author-block">Jianhuai Hu<sup>1</sup>,</span>
+              <span class="author-block">Jianhuai Hu<sup>1</sup><sup>*</sup>,</span>
               <span class="author-block"><a href="https://scholar.google.com/citations?user=UqBl_VMAAAAJ" target="_blank">Xingjian Du</a><sup>2</sup>,</span>
               <span class="author-block">Yueqi Peng<sup>3</sup>,</span>
             </div>
@@ -119,9 +119,20 @@
                   <a href="https://huggingface.co/ElectricOnes/NotaGen" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                      <i class="emoji-icon">🤗</i> <!-- 使用Hugging Face经典表情符号 -->
+                      <class="emoji-icon">🤗
                     </span>
                     <span>NotaGen Weights</span>
+                  </a>
+                </span>
+
+                <!-- Hugging Face Space link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/ElectricAlexis/NotaGen" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <class="emoji-icon">✨️
+                    </span>
+                    <span>NotaGen Space</span>
                   </a>
                 </span>
 
@@ -348,6 +359,18 @@
             </div>
           </div>
 
+          <div class="player-container">
+            <h2 class="video-title" id="videoTitle8"></h2>
+            <div class="content has-text-justified" style="font-size: 20px;">
+              <p>We are honored to have invited <b>Hongwei Zhu</b>, a distinguished pianist from Central Conservatory of Music, to perform <i>Waltz in F-sharp Minor</i> by NotaGen. His exquisite interpretation and delicate performance breathe new life into this composition. Click to listen!</p>
+            </div>
+            <div class="video-container">
+                <iframe id="ytplayer8" allowfullscreen
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+          </div>
+
           </section>
         </div>
       </div>
@@ -490,6 +513,15 @@
       title: document.getElementById('videoTitle7')
   };
 
+  const player8 = {
+      videos: [
+          { id: 'rlS-nxNJ36o', title: 'Bonus! NotaGen Performed by Musicians' },
+      ],
+      currentIndex: 0,
+      player: document.getElementById('ytplayer8'),
+      title: document.getElementById('videoTitle8')
+  };
+
 
   // 通用加载函数
   function loadVideo(playerObj, index) {
@@ -549,6 +581,7 @@
   loadVideo(player5, 0);
   loadVideo(player6, 0);
   loadVideo(player7, 0);
+  loadVideo(player8, 0);
 
 
 
